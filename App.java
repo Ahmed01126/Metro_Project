@@ -2,14 +2,12 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Scanner;
 
+
 public class App {
-    public static void main(String[] args) {
+    public static void app(String[] args) {
         Line Line2  = new Line();
         Line2.setId((byte) 1);
         ArrayList<String> line2Stations = new ArrayList<String>();
-        line2Stations.add("");
-        line2Stations.add("Shubra");
-        line2Stations.add("Koleyet El Zeraat");
         line2Stations.add("");
         line2Stations.add("Shubra");
         line2Stations.add("Koleyet El Zeraat");
@@ -38,8 +36,8 @@ public class App {
             System.out.println("Enter your start station:");
             trip.setStartStation(iScanner.nextLine());
             System.out.println("Enter your end station:");
-            String endStation = iScanner.nextLine();
-            if (line2Stations.contains(startStation) && line2Stations.contains(endStation)) {
+            trip.setEndStation(iScanner.nextLine());
+            if (Line2.getStations().contains(trip.getStartStation()) && line2Stations.contains(trip.getEndStation())){
                 // Calculate the number of stations, expected time
                 byte startIndex = (byte) line2Stations.indexOf(startStation);
                 byte endIndex = (byte) line2Stations.indexOf(endStation);
@@ -85,3 +83,4 @@ public class App {
 
     }
 }
+

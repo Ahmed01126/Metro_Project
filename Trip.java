@@ -6,11 +6,12 @@ public class Trip {
     private Line line;
     private byte startStationIndex = getStationIndex(startStation);
     private byte endStationIndex = getStationIndex(endStation);
-    
-    // Getters and Setters 
+
+    // Getters and Setters  
     public String getStartStation() {
         return startStation;
     }
+
     public void setStartStation(String startStation) {
         this.startStation = startStation;
     }
@@ -18,6 +19,7 @@ public class Trip {
     public String getEndStation() {
         return endStation;
     }
+
     public void setEndStation(String endStation) {
         this.endStation = endStation;
     }
@@ -25,13 +27,14 @@ public class Trip {
     public Line getLine() {
         return line;
     }
+
     public void setLine(Line line) {
         this.line = line;
     }
 
     // Get the index of th station
     public byte getStationIndex(String station) {
-        return (byte) Line.getStations().indexOf(station);
+        return (byte) this.getStations().indexOf(station);
     }
 
     // Calculate the number of stations between the start and end stations
@@ -70,6 +73,7 @@ public class Trip {
     public Trip() {
 
     }
+
     public Trip(String startStation, String endStation, Line line) {
         this.startStation = startStation;
         this.endStation = endStation;

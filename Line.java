@@ -2,7 +2,7 @@ import java.util.ArrayList;
 
 public class Line {
     private byte id;
-    private static ArrayList<String> stations;
+    private ArrayList<String> stations;
 
     // Getters and Setters
     public byte getId() {
@@ -12,12 +12,12 @@ public class Line {
         this.id = id;
     }
 
-    public static ArrayList<String> getStations() {
+    public  ArrayList<String> getStations() {
         return stations;
     }
 
-    public static void setStations(ArrayList<String> stations) {
-        Line.stations = stations;
+    public void setStations(ArrayList<String> stations) {
+        this.stations = stations;
     }
 
     // Constructors
@@ -25,7 +25,7 @@ public class Line {
     }
     public Line(byte id, ArrayList<String> stations) {
         this.id = id;
-        Line.stations = stations;
+        this.stations = stations;
     }
 
 
